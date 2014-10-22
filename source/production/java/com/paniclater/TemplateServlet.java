@@ -25,4 +25,10 @@ public class TemplateServlet extends HttpServlet {
 		resp.getWriter().println("Hello World!");
 	}
 	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		String name = req.getParameter("name");
+		resp.getWriter().println("Hello " + name + "!");
+	}
+	
 }
