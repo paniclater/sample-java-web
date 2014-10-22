@@ -29,8 +29,10 @@ public class TemplateServlet extends HttpServlet {
 			name = req.getParameter("name");
 		}
 		String html = 	"<!doctype html>";
-		html +=		  	"<html><header><title>Hello " + name + "</title></header>";
-		html +=			"<body><p>Hello " + name + "</p><form action=\"greeting\" method=\"POST\"><input type=\"text\" name=\"name\"><input type=\"submit\" value=\"submit\"></form></body>";
+		html +=		  	"<html><header><title>Hello " + name + "</title></header><body>";
+		html +=			"<p>Hello " + name + "</p>";
+		html +=			"<form action=\"greeting\" method=\"POST\"><input type=\"text\" name=\"name\">";
+		html += 		"<input type=\"submit\" value=\"submit\"></form></body></html>";
 		resp.getWriter().println(html);
 	}
 	
